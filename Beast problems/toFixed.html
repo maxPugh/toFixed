@@ -1,0 +1,16 @@
+<script src="../simpletest.js"></script>
+<script src="toFixed.js"></script>
+<script>
+  tests({
+    "0.615 should round up to 0.62": function () {
+      var result = newFixed("0.615", 2);
+      eq(result, "0.62");
+    },
+    "10.235 should round up to 10.24": function () {
+      eq(newFixed("10.235", 2), "10.24");
+    },
+    "1.005 should round up to 1.01": function () {
+      eq(newFixed("1.005", 2), "1.01");
+    },
+  });
+</script>
